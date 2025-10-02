@@ -67,7 +67,7 @@ Use real dermatology and skin condition datasets:
 ---
 
 ## Containerization & Load Balancing
-- Each agent = microservice in Docker.  
+- Each agent = Using an Agentic framework like Strands Agents, LangChain etc as a microservice in Docker.  
 - Deploy on Kubernetes or Docker Compose.  
 - FastAPI gateway provides REST endpoints for upload/report retrieval.  
 
@@ -112,7 +112,7 @@ This event-driven architecture allows for real-time feedback and dynamic plan ad
 The data lake (AWS S3) would store a massive collection of learning resources (links to articles, video tutorials, practice problems) and all historical user progress data.
 
 ### Containerization & Load Balancing
-Docker and Kubernetes would be used to manage the various agents and the user-facing web application.  
+Docker and Kubernetes would be used to manage the various agents and the user-facing web application ans the agents will be using an Agentic framework like Strands Agents, LangChain.  
 The platform would be accessible via a web browser, with a load balancer managing traffic.
 
 ### IBM Tools
