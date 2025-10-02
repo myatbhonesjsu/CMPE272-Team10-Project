@@ -117,7 +117,7 @@ The platform would be accessible via a web browser, with a load balancer managin
 
 ### IBM Tools
 IBM Watsonx could be integrated to fine-tune a model on educational content, allowing for more domain-specific and accurate coaching responses.
-IBM Instana: Monitoring logs and for observability tools in general
+
 ---
 
 ## Complexity
