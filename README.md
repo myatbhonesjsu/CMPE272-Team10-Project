@@ -77,6 +77,50 @@ Use real dermatology and skin condition datasets:
 - IBM Watsonx.ai: LLM for generating natural-language reports with safe product suggestions.  
 - IBM MQ: for reliable product alert notifications (e.g., “rash worsening for 5 days—try soothing lotion”).
 
+---
 
+---
 
+# Idea 2: AI-Powered Personal Learning & Skill Development Coach
+
+## Problem
+Many people want to learn new skills but struggle with motivation, finding the right resources, and creating a structured learning path.
+
+---
+
+## Project Idea
+Build a platform that acts as a personal AI tutor and coach.  
+The user defines a goal (e.g., "learn Python for data analysis"), and the AI agents create a personalized learning plan, provide resources, and adapt based on the user's progress.
+
+---
+
+## How it Works with Tools
+
+### Data Source
+The primary data source would be a user's interactions with the platform (simulated "quiz" results, "lessons completed," and user-entered notes). This data is streamed to a central system.
+
+### Apache Kafka
+All user-interaction events are streamed to Kafka.  
+This event-driven architecture allows for real-time feedback and dynamic plan adjustments.
+
+### Agentic Pipeline
+- Learning Plan Agent: When a user sets a goal, this agent uses an LLM to generate a structured curriculum from a vast knowledge base (the data lake).  
+- Progress Tracking Agent: This agent consumes user events from Kafka. It tracks progress, identifies areas where the user is struggling, and provides personalized feedback.  
+- Resource & Motivation Agent: If a user is stuck, this agent recommends alternative resources (e.g., a specific YouTube video or a blog post). It also sends automated motivational messages based on the user's progress.  
+
+### Data Lake
+The data lake (AWS S3) would store a massive collection of learning resources (links to articles, video tutorials, practice problems) and all historical user progress data.
+
+### Containerization & Load Balancing
+Docker and Kubernetes would be used to manage the various agents and the user-facing web application.  
+The platform would be accessible via a web browser, with a load balancer managing traffic.
+
+### IBM Tools
+IBM Watsonx could be integrated to fine-tune a model on educational content, allowing for more domain-specific and accurate coaching responses.
+
+---
+
+## Complexity
+High.  
+The biggest challenges are building a truly intelligent and adaptive learning model, as well as managing and organizing a vast amount of learning resources in the data lake.
 
