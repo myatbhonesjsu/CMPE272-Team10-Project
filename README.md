@@ -67,7 +67,7 @@ Use real dermatology and skin condition datasets:
 ---
 
 ## Containerization & Load Balancing
-- Each agent = Using an Agentic framework like Strands Agents, LangChain etc as a microservice in Docker.  
+- Each agent = Using an Agentic framework like Strands Agents, LangChain and deploying one as a microservice in Docker.  
 - Deploy on Kubernetes or Docker Compose.  
 - FastAPI gateway provides REST endpoints for upload/report retrieval.  
 
